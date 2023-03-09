@@ -5,6 +5,10 @@ body{
     font-family: pregular;
 }
 
+img{
+    width: 100%;
+}
+
 .satu{
     font-family: pbold;
 }
@@ -67,6 +71,7 @@ body{
     border-radius: 100px;
     margin-top: 1em;
   }
+
   .tombol_judul:before {
     content: "";
     position: absolute;
@@ -94,3 +99,10 @@ body{
     -webkit-transform: scale(2);
     transform: scale(2);
   }
+
+.judul_bagan{
+    font-family: onelove;
+    font-size: 4em;
+    color: #E2B9DB;
+}
+
