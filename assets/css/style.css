@@ -5,6 +5,43 @@ body{
     font-family: pregular;
 }
 
+.header {
+    overflow: hidden;
+    background-color: #ffa2f3;
+    padding: 20px 10px;
+  }
+  .header a {
+    float: left;
+  }
+  
+  .header a:hover {
+    color: black;
+  }
+  
+  .header a.active {
+    color: white;
+  }
+  
+  .kananatas {
+      float: right;
+  }
+    .header-right {
+      color: black;
+      -webkit-transition: background-color 0.5s ease-out;
+      -moz-transition: background-color 0.5s ease-out;
+      -o-transition: background-color 0.5s ease-out;
+      transition: background-color 0.5s ease-out;
+      border-radius: 2px;
+      margin-left: 2px;
+      margin-right: 2px;
+  }
+  
+  .header-right:hover{
+      background-color: #FFEC8D;
+    cursor: pointer;
+  }
+  
+
 img{
     width: 100%;
 }
