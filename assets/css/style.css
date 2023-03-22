@@ -6,40 +6,40 @@ body{
 }
 
 .header {
-    overflow: hidden;
-    background-color: #ffa2f3;
-    padding: 20px 10px;
-  }
-  .header a {
-    float: left;
-  }
-  
-  .header a:hover {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+.header a {
+  float: left;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header a.active {
+  color: white;
+}
+
+.kananatas {
+    float: right;
+}
+
+.header-right {
     color: black;
-  }
-  
-  .header a.active {
-    color: white;
-  }
-  
-  .kananatas {
-      float: right;
-  }
-    .header-right {
-      color: black;
-      -webkit-transition: background-color 0.5s ease-out;
-      -moz-transition: background-color 0.5s ease-out;
-      -o-transition: background-color 0.5s ease-out;
-      transition: background-color 0.5s ease-out;
-      border-radius: 2px;
-      margin-left: 2px;
-      margin-right: 2px;
-  }
-  
-  .header-right:hover{
-      background-color: #FFEC8D;
-    cursor: pointer;
-  }
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.header-right:hover{
+    background-color: #FFEC8D;
+  cursor: pointer;
+}
   
 
 img{
@@ -111,7 +111,7 @@ img{
     color: #333333;
   }
 
-  .tombol_judul a{
+  a{
     color:#333333;
     text-decoration: none;
   }
@@ -155,6 +155,15 @@ img{
     font-size: 5em;
     color: #E2B9DB;
     margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.text_bagan{
+  padding-right:12em;
+}
+
+.text_bagan_kanan{
+  padding-left:12em;
 }
 
 .judul_bagan_1{
@@ -167,6 +176,7 @@ img{
 .judul_bagan_1_kanan{
     padding: 0 2em 0 0;
     text-align: right;
+    align-content: end;
 }
 
 .gambar_baris_satu, .gambar_baris_dua{
@@ -199,5 +209,102 @@ img{
 .text_bagan_4{
     text-align: center;
     padding: 0 6em;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.flex{
+  display: flex;
+align-items: center ;
+align-content: center;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+.box h2{
+  color:#333333;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+
+.box ul{
+  position: relative;
+  background: #fff;
+  padding: 0;
+}
+
+.box ul li{
+  list-style-type: none;
+  padding: 1em;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+  transition: transform 0.5s;
+  
+}
+
+.box ul:hover li{
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.box ul li:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  background: #A0C3E1;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+  color:white;
+  opacity: 1;
+}
+
+.box ul li span{
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  line-height: 20px;
+  background: #A3E9B7;
+  color: #333333;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 0.5em;
+  font-size: medium;
+  transform: translateY(-0.2em);
+}
+
+.box ul li:hover span{
+  background-color: #FFEC8D;
+  color: #333333;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 50%;
+}
+
+.logo_wa{
+  padding: 0 2em;
+}
+
+/* bg color */
+
+.tentang_kami{
+  padding: 5em 0;
+}
+
+.footer{
+  background-color: #FFEC8D;
+  padding: 5em 0;
 }
 

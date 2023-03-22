@@ -3,7 +3,13 @@
     grid-template-columns: repeat(12, 1fr);
     /* grid-template-columns: 16rem 1fr 16rem; */
     grid-template-rows: auto 1fr auto;
+    padding: 0 10em;
 }  
+
+.grid_tengah{
+    align-items: center;
+    align-content: start;
+}
 
 @media (max-width:1024px){
     .grid{
@@ -64,10 +70,6 @@
     max-width: 68rem;
     margin: 0 auto;
 }
-/* 
-.grid-bg{
-  
-} */
 
 .grid-height{
     height: 30rem;
