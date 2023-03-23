@@ -1,8 +1,18 @@
 @import "font.css";
 @import "grid.css";
+@import "button.css";
+@import "navbar.css";
+
+html{
+  scroll-behavior: smooth;
+}
 
 body{
     font-family: pregular;
+}
+
+#Produk{
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -90,65 +100,10 @@ img{
     font-size: 0.9rem;
 }
 
-.tombol_judul {
-    font-family: pebold;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    overflow: hidden;
-    background: #A3E9B7;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    padding: 1em 2em;
-    border-radius: 100px;
-    margin-top: 1em;
-    border: 0px;
-    color: #333333;
-  }
-
-  a{
-    color:#333333;
-    text-decoration: none;
-  }
-
-  .tombol_judul:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #333333;
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  .tombol_judul:hover, .tombol_judul:focus, .tombol_judul:active {
-    color: #A3E9B7;
-    cursor: pointer;
-  }
-
-  .tombol_judul a:hover, .tombol_judul a:focus, .tombol_judul a:active {
-    color: #A3E9B7;
-    cursor: pointer;
-  }
-
-  .tombol_judul:hover:before, .tombol_judul:focus:before, .tombol_judul:active:before {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-  }
+a{
+  color:#333333;
+  text-decoration: none;
+}
 
 .judul_bagan{
     font-family: onelove;
@@ -177,21 +132,34 @@ img{
     padding: 0 2em 0 0;
     text-align: right;
     align-content: end;
+    height: 100%;
 }
 
 .gambar_baris_satu, .gambar_baris_dua{
+    display: flex;
     padding: 0.6em;
+    transition: 0.5s;
+}
+
+.gambar_baris_satu:hover, .gambar_baris_dua:hover{
+  cursor: pointer;
+  transform: scale(1.4);
+  z-index: 100;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
 }
 
 .gambar_kami{
-    width: 100%;
-    padding: 0;
+    height: 50%;
+    padding: 0.6em;
     transition: 0.5s;
 }
 
 .gambar_kami:hover{
     cursor: pointer;
-    padding: 1em;
+    transform: scale(1.4);
+    z-index: 100;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+    border:1px solid #FFEC8D;
 }
 
 .judul_bagan_4{
@@ -223,70 +191,50 @@ align-items: center ;
 align-content: center;
 }
 
-.box{
-  display: flex;
-  justify-content: center;
-  border-bottom-left-radius:10px;
-  border-bottom-right-radius:10px;
-}
 
-.box h2{
-  color:#333333;
+.daftar{
   background-color: white;
-  font-size: 20px;
-  font-weight: 700;
-  border-top-left-radius:10px;
-  border-top-right-radius:10px;
-}
-
-.box ul{
-  position: relative;
-  background: #fff;
-  padding: 0;
-}
-
-.box ul li{
-  list-style-type: none;
-  padding: 1em;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
   transition: transform 0.5s;
-  
+  border-radius: 0.2em;
+  padding: 0.5em 1em;
+  opacity:1;
 }
 
-.box ul:hover li{
-  opacity: 0.2;
+.daftar:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  background: #FFEC8D;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+  color:#333333;
+  opacity: 1;
   cursor: pointer;
 }
 
-.box ul li:hover{
-  transform: scale(1.1);
-  z-index: 100;
-  background: #A0C3E1;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-  color:white;
-  opacity: 1;
-}
-
-.box ul li span{
-  width: 1.2em;
-  height: 1.2em;
+.daftar span{
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 20px;
-  background: #A3E9B7;
+  line-height: 2.5em;
+  background: #E2B9DB;
   color: #333333;
   display: inline-block;
   border-radius: 50%;
-  margin: 0 0.5em;
-  font-size: medium;
+  margin:  0.9em;
+  font-family: pblack;
   transform: translateY(-0.2em);
+  cursor: pointer;
 }
 
-.box ul li:hover span{
-  background-color: #FFEC8D;
-  color: #333333;
+.daftar:hover span{
+  background-color: #333333;
+  color: white;
   cursor: pointer;
+}
+
+.tombol_pemesanan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo img{
@@ -304,7 +252,33 @@ align-content: center;
 }
 
 .footer{
+  margin-top: 5em;
   background-color: #FFEC8D;
   padding: 5em 0;
 }
 
+.footer1{
+}
+
+.footer1_logo img{
+  width: 14em;
+  padding: 0 0 0 2.2em;
+}
+
+.footer2_teks{
+  margin-top: 1em;
+}
+
+.footer_link a{
+  line-height: 3em;
+  font-family: pbold;
+  color:#333333;
+  transition: 0.5s;
+  
+  scroll-behavior: smooth;
+}
+
+.footer_link a:hover{
+  color:#fd507e;
+  cursor: pointer;
+}

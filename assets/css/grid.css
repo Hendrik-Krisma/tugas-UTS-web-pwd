@@ -6,6 +6,12 @@
     padding: 0 10em;
 }  
 
+.grid_daftar{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 12em;
+}
+
 .grid_tengah{
     align-items: center;
     align-content: start;
