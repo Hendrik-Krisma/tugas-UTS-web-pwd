@@ -9,11 +9,24 @@ html{
 
 body{
     font-family: pregular;
+    background: linear-gradient(-45deg, rgba(255,255,255, 1),rgba(159, 217, 255, 0.2), rgba(255,255,255, 1));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
 }
 
-#Produk{
-  scroll-behavior: smooth;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
+
 
 .header {
   overflow: hidden;
@@ -111,6 +124,7 @@ a{
     color: #E2B9DB;
     margin-bottom: 0.5em;
     text-align: center;
+    filter: drop-shadow(0.1em 0.08em 0.04em #d8d6d6);
 }
 
 .text_bagan{
@@ -135,6 +149,95 @@ a{
     height: 100%;
 }
 
+.daftar_fitur, .daftar_fitur_kanan{
+  margin-top: 1em;
+}
+
+.daftar_fitur ul, .daftar_fitur_kanan ul{
+  margin: 0;
+  padding: 0;
+}
+
+.daftar_fitur ul li{
+  list-style: none;
+  color: #333333;
+  border-left: 4px solid #fd507e;
+  margin: 0.7em 0.2em;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+.daftar_fitur ul li:hover{
+  left:10px;
+}
+
+.daftar_fitur ul li::before{
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background-color: #A0C3E1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+
+}
+
+.daftar_fitur ul li:hover::before{
+  transform: scaleX(1);
+}
+
+.daftar_fitur ul li p{
+  position: relative;
+  display: inline-block;
+  padding: 0.3em 1em;
+  margin: 0;
+}
+
+/* Daftar Kanan */
+
+.daftar_fitur_kanan ul li{
+  list-style: none;
+  color: #333333;
+  border-right: 4px solid #fd507e;
+  margin: 0.2em;
+  position: relative;
+  right: 0;
+  transition: 0.5s;
+}
+
+.daftar_fitur_kanan ul li:hover{
+  right:10px;
+}
+
+.daftar_fitur_kanan ul li::before{
+  content: '';
+  position: absolute;
+  right:0;
+  width: 40%;
+  height: 100%;
+  background-color: #A0C3E1;
+  z-index: -100;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.5s;
+
+}
+
+.daftar_fitur_kanan ul li:hover::before{
+  transform: scaleX(1);
+}
+
+.daftar_fitur_kanan ul li p{
+  position: relative;
+  display: inline-block;
+  padding: 0.3em 1em;
+  margin: 0;
+}
+
+/* Daftar Kanan */
+
 .gambar_baris_satu, .gambar_baris_dua{
     display: flex;
     padding: 0.6em;
@@ -149,9 +252,10 @@ a{
 }
 
 .gambar_kami{
-    height: 50%;
+    height: 60%;
     padding: 0.6em;
     transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .gambar_kami:hover{
@@ -163,9 +267,11 @@ a{
 }
 
 .judul_bagan_4{
-    padding: 0.2em 0 0 1.5em;
+    margin-top: -3em;
+    padding: 0.2em 0 0 2.8em;
     font-size: 4.3em;
     color: #FFEC8D;
+    filter: drop-shadow(0.1em 0.08em 0.04em #e2e2e2);
 }
 
 .tangan_ibu{
@@ -177,6 +283,11 @@ a{
 .text_bagan_4{
     text-align: center;
     padding: 0 6em;
+    margin-top: -6em;
+}
+
+.gambar_ig{
+  padding: 3em 0.6em;
 }
 
 .header{
@@ -191,10 +302,10 @@ align-items: center ;
 align-content: center;
 }
 
-
 .daftar{
   background-color: white;
   transition: transform 0.5s;
+  transition:0.5s;
   border-radius: 0.2em;
   padding: 0.5em 1em;
   opacity:1;
@@ -208,6 +319,7 @@ align-content: center;
   color:#333333;
   opacity: 1;
   cursor: pointer;
+  font-family: pmedium;
 }
 
 .daftar span{
@@ -232,6 +344,7 @@ align-content: center;
 }
 
 .tombol_pemesanan{
+  margin-top: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +354,11 @@ align-content: center;
   width: 50%;
 }
 
-.logo_wa{
+.footer_kontak{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding: 0 2em;
 }
 
@@ -257,9 +374,6 @@ align-content: center;
   padding: 5em 0;
 }
 
-.footer1{
-}
-
 .footer1_logo img{
   width: 14em;
   padding: 0 0 0 2.2em;
@@ -267,6 +381,80 @@ align-content: center;
 
 .footer2_teks{
   margin-top: 1em;
+}
+
+.footer_judul{
+  font-family: pebold;
+  font-size: 1.5em;
+}
+
+.footer_waa, .footer_iga{
+  margin-top:0.5em;
+  display: flex;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  font-family: pbold; 
+  text-decoration: none;
+  color: #fff; 
+  font-size: 1.2em; 
+  border-radius: 2em; 
+  font-weight: bold; 
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer_waa{
+  background: #25d366 no-repeat 1.5em center; background-size: 1.6em;
+  padding: 0.8em 0 0.4em 0;
+}
+
+.footer_iga{
+  background: #fd507e no-repeat 1.5em center; background-size: 1.6em;
+  padding: 1em 0 0.4em 0;
+}
+
+span svg{
+  fill: #fff;
+  transition: 0.5s;
+}
+
+.footer_waa:hover span svg{
+  fill: #25d366;
+}
+
+.footer_waa:hover{
+  color: #25d366; 
+  background: #fff no-repeat 1.5em center; background-size: 1.6em;
+  fill: #25d366;
+}
+
+.footer_waa span a{
+  transition: 0.5s;
+  color: #fff;
+}
+
+.footer_waa:hover span a{
+  color:#25d366;
+}
+
+.footer_iga:hover span svg{
+  fill: #fd507e;
+}
+
+.footer_iga:hover{
+  color: #fd507e; 
+  background: #fff no-repeat 1.5em center; background-size: 1.6em;
+  fill: #fd507e;
+}
+
+.footer_iga span a{
+  transition: 0.5s;
+  color: #fff;
+}
+
+.footer_iga:hover span a{
+  color:#fd507e;
 }
 
 .footer_link a{
@@ -282,3 +470,45 @@ align-content: center;
   color:#fd507e;
   cursor: pointer;
 }
+
+
+/* Overlay */
+/* .footer_wa {
+  position: relative;
+  width:100%;
+}
+
+.gambar_overlay {
+  display: block;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.5);
+  border-radius: 1em;
+}
+
+.footer_wa:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}  */

@@ -16,7 +16,6 @@ nav {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background: white;
     z-index: 1;
 }
 
@@ -29,6 +28,9 @@ nav ul {
 
 nav ul li {
     float: left;
+    list-style-type: none;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
 nav ul li a {
@@ -36,10 +38,14 @@ nav ul li a {
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
+    transition: 0.5s;
+    padding: 0.5em 1em;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color:white;
+    background-color: #D8BAD2;
+    border-radius: 2em;
 }
 
 .tbl-pink {
@@ -58,5 +64,5 @@ nav ul li a:hover {
 
 .logo {
     padding-top: 2px;
-    width:6em;
+    width:5em;
 }
