@@ -170,6 +170,8 @@ a{
 
 .daftar_fitur ul li:hover{
   left:10px;
+  
+  color:white;
 }
 
 .daftar_fitur ul li::before{
@@ -177,7 +179,7 @@ a{
   position: absolute;
   width: 40%;
   height: 100%;
-  background-color: #A0C3E1;
+  background-color: #E2B9DB;
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.5s;
@@ -186,6 +188,7 @@ a{
 
 .daftar_fitur ul li:hover::before{
   transform: scaleX(1);
+  color:white;
 }
 
 .daftar_fitur ul li p{
@@ -201,7 +204,7 @@ a{
   list-style: none;
   color: #333333;
   border-right: 4px solid #fd507e;
-  margin: 0.2em;
+  margin: 0.7em 0.2em;
   position: relative;
   right: 0;
   transition: 0.5s;
@@ -209,6 +212,7 @@ a{
 
 .daftar_fitur_kanan ul li:hover{
   right:10px;
+  color:white;
 }
 
 .daftar_fitur_kanan ul li::before{
@@ -227,6 +231,7 @@ a{
 
 .daftar_fitur_kanan ul li:hover::before{
   transform: scaleX(1);
+  color:white;
 }
 
 .daftar_fitur_kanan ul li p{
