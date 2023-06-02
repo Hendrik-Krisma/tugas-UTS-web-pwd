@@ -1,0 +1,68 @@
+.wrapper {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.menu {
+    float: right;
+}
+
+nav .hk {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul .hk1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul .hk2 {
+    float: left;
+    list-style-type: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    color: black;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+    color:white;
+    background-color: #D8BAD2;
+    border-radius: 2em;
+}
+
+.tbl-pink {
+    background: #D8BAD2;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.tbl-pink:hover {
+    background: #A0C3E1;
+    text-decoration: none;
+}
+
+.logo {
+    padding-top: 2px;
+    width:5em;
+}

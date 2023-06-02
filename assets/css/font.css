@@ -1,0 +1,53 @@
+@font-face {  
+    font-family: pbold;
+    src: url(../fonts/poppins/Poppins-Thin.ttf);
+}
+
+@font-face {  
+    font-family: pelight;
+    src: url(../fonts/poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {  
+    font-family: plight;
+    src: url(../fonts/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: pregular;
+  src: url(../fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {  
+    font-family: pmedium;
+    src: url(../fonts/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {  
+    font-family: psbold;
+    src: url(../fonts/poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: pbold;
+  src: url(../fonts/poppins/Poppins-Bold.ttf);
+}
+
+@font-face {  
+    font-family: pebold;
+    src: url(../fonts/poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {  
+    font-family: pblack;
+    src: url(../fonts/poppins/Poppins-Black.ttf);
+}
+
+@font-face {  
+    font-family: onelove;
+    src: url(../fonts/onelove/onelove.otf);
+}
+
+
+
+
