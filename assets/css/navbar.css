@@ -7,7 +7,7 @@
 .menu {
     float: right;
 }
-
+/* 
 nav .hk {
     width: 100%;
     margin: auto;
@@ -46,9 +46,9 @@ nav ul li a:hover {
     color:white;
     background-color: #D8BAD2;
     border-radius: 2em;
-}
+} */
 
-.tbl-pink {
+/* .tbl-pink {
     background: #D8BAD2;
     border-radius: 20px;
     margin-top: 20px;
@@ -60,7 +60,7 @@ nav ul li a:hover {
 .tbl-pink:hover {
     background: #A0C3E1;
     text-decoration: none;
-}
+} */
 
 .logo {
     padding-top: 2px;

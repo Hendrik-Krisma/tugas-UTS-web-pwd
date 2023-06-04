@@ -1,7 +1,7 @@
-.grid{
+.grid-kustom{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* grid-template-columns: 16rem 1fr 16rem; */
+    grid-template-columns: 16rem 1fr 16rem;
     grid-template-rows: auto 1fr auto;
     padding: 0 10em;
 }  
@@ -24,59 +24,59 @@
     }
 } */
 
-.col-1{
+.col-1-kustom{
     grid-column: span 1 / span 1;
 }
 
-.col-2{
+.col-2-kustom{
     grid-column: span 2 / span 2;
 }
 
-.col-3{
+.col-3-kustom{
     grid-column: span 3 / span 3;
 }
 
-.col-4{
+.col-4-kustom{
     grid-column: span 4 / span 4;
 }
 
-.col-5{
+.col-5-kustom{
     grid-column: span 5 / span 5;
 }
 
-.col-6{
+.col-6-kustom{
     grid-column: span 6 / span 6;
 }
 
-.col-7{
+.col-7-kustom{
     grid-column: span 7 / span 7;
 }
 
-.col-8{
+.col-8-kustom{
     grid-column: span 8 / span 8;
 }
 
-.col-9{
+.col-9-kustom{
     grid-column: span 9 / span 9;
 }
 
-.col-10{
+.col-10-kustom{
     grid-column: span 10 / span 10;
 }
 
-.col-11{
+.col-11-kustom{
     grid-column: span 11 / span 11;
 }
 
-.col-12{
+.col-12-kustom{
     grid-column: span 12 / span 12;
 }
 
-.grid-max{
+/* .grid-max{
     max-width: 68rem;
     margin: 0 auto;
 }
 
 .grid-height{
     height: 30rem;
-}
+} */
