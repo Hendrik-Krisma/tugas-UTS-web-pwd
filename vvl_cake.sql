@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2023 at 05:50 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Jun 06, 2023 at 06:49 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,6 +44,19 @@ INSERT INTO `produk_kami` (`id_produkkami`, `gambar_pk`, `judul_pk`, `deskripsi_
 (37, '27f0e26a30fb625270af28e4b5376712.jpg', 'Kue Kering', 'Kue dan snack manis yang dapat menemani hari-harimu dalam segala kegiatan agar tetap bahagia dan semangat.', 'Isian, Ukuran, Rasa'),
 (38, 'f078881af11e7a2b23081ec8de24f473.jpg', 'Dessert', 'Kue yang dilapisi coklat bertaburi manisnya ceres coklat, dipadukan dengan saus coklat asli yang manis.', 'Warna, Isian, Rasa, Tema'),
 (39, '3a9bd0f468d43452dfb39c8679b4bc48.jpg', 'Kue Basah', 'Kue basah seperti bolu kukus atau lapis legit memiliki kelembutan yang menggoda di setiap gigitannya, sementara brownies menghadirkan rasa kaya dan beraroma cokelat yang lezat.', 'Isian, Rasa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk_laris`
+--
+
+CREATE TABLE `produk_laris` (
+  `id_produklaris` int(10) NOT NULL,
+  `gambar_pl` varchar(255) NOT NULL,
+  `judul_pl` varchar(255) NOT NULL,
+  `harga_pl` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -98,6 +111,12 @@ ALTER TABLE `produk_kami`
   ADD PRIMARY KEY (`id_produkkami`);
 
 --
+-- Indexes for table `produk_laris`
+--
+ALTER TABLE `produk_laris`
+  ADD PRIMARY KEY (`id_produklaris`);
+
+--
 -- Indexes for table `user_form`
 --
 ALTER TABLE `user_form`
@@ -118,6 +137,12 @@ ALTER TABLE `user_type`
 --
 ALTER TABLE `produk_kami`
   MODIFY `id_produkkami` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `produk_laris`
+--
+ALTER TABLE `produk_laris`
+  MODIFY `id_produklaris` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user_form`

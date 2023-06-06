@@ -61,6 +61,76 @@ if ($aksi == "tambah") {
                                 </tr>
                             </thead>
                             
+                            <tbody id="myTable">
+                                <?php
+                                $no = 1;
+                                $sql = "SELECT * FROM produk_laris";
+                                $query = mysqli_query($con, $sql);
+                                while ($row = mysqli_fetch_array($query)) {
+                                    $link_edit = "admin_dashboard.php?section=produk_laris&aksi=edit&id=$row[id_produklaris]";
+                                    $link_hapus = "./web/laris_manis/larismanis_delete.php?id=$row[id_produklaris]";
+
+                                    $gambar = "default.jpg";
+                                    if (!empty($row['gambar_pl'])) {
+                                        $gambar = $row['gambar_pl'];
+                                    }
+
+                                    $link_gambar = "./assets/images/inserted_img/$row[gambar_pl]";
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <?= $no; ?>
+                                        </td>
+                                        <td>
+                                            <img src="<?= $link_gambar; ?>" class="zoom-hover" style='height: 70px; width: 70px; object-fit: cover'>
+                                        </td>
+                                        <td>
+                                            <?= $row['judul_pl']; ?>
+                                        </td>
+                                        <td>
+                                            <?= $row['harga_pl']; ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-success">
+                                                <a class="text-light" href="<?= $link_edit; ?>">
+                                                    <i class="ti ti-edit"></i>&nbsp; EDIT
+                                                </a>
+                                            </button>
+
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapuskategori<?= $row['id_produklaris']; ?>">
+
+                                                <i class="ti ti-trash"></i>&nbsp; HAPUS
+
+                                            </button>
+                                            <div class="modal fade" id="hapuskategori<?= $row['id_produklaris']; ?>" tabindex="-1" aria-labelledby="hapuskategori" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="hapuskategori">Konfirmasi - Hapus</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p class="fs-5 fw-semibold">Yakin ingin menghapus data?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">KEMBALI</button>
+                                                            <button type="button" class="btn btn-danger">
+                                                                <a class="text-light" href="<?= $link_hapus; ?>">
+                                                                    HAPUS
+                                                                </a>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php
+                                    $no++;
+                                }
+                                ?>
+                            </tbody>
+
                         </table>
                     </div>
                 </div>
