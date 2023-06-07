@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2023 at 06:49 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jun 07, 2023 at 06:33 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,8 +40,8 @@ CREATE TABLE `produk_kami` (
 --
 
 INSERT INTO `produk_kami` (`id_produkkami`, `gambar_pk`, `judul_pk`, `deskripsi_pk`, `kustomisasi`) VALUES
-(36, '9f55f369967836fc270f5afe0e78ed6e.jpg', 'Kue Ulang Tahun', 'Kue untuk orang-orang yang berulang tahun, dibalut dengan hiasan keren dengan tema yang disesuaikan. ', 'Warna, Isian, Ukuran, Rasa, Tema'),
-(37, '27f0e26a30fb625270af28e4b5376712.jpg', 'Kue Kering', 'Kue dan snack manis yang dapat menemani hari-harimu dalam segala kegiatan agar tetap bahagia dan semangat.', 'Isian, Ukuran, Rasa'),
+(36, '9f55f369967836fc270f5afe0e78ed6e.jpg', 'Kue Ulang ', 'Kue untuk orang-orang yang berulang tahun, dibalut dengan hiasan keren dengan tema yang disesuaikan. ', 'Warna, Isian, Ukuran, Rasa, Tema'),
+(37, '27f0e26a30fb625270af28e4b5376712.jpg', 'Kue Kering', 'Kue dan snack manis yang dapat menemani hari-harimu dalam segala kegiatan agar tetap bahagia dan semangat.', 'Warna, Ukuran, Rasa'),
 (38, 'f078881af11e7a2b23081ec8de24f473.jpg', 'Dessert', 'Kue yang dilapisi coklat bertaburi manisnya ceres coklat, dipadukan dengan saus coklat asli yang manis.', 'Warna, Isian, Rasa, Tema'),
 (39, '3a9bd0f468d43452dfb39c8679b4bc48.jpg', 'Kue Basah', 'Kue basah seperti bolu kukus atau lapis legit memiliki kelembutan yang menggoda di setiap gigitannya, sementara brownies menghadirkan rasa kaya dan beraroma cokelat yang lezat.', 'Isian, Rasa');
 
@@ -53,10 +53,20 @@ INSERT INTO `produk_kami` (`id_produkkami`, `gambar_pk`, `judul_pk`, `deskripsi_
 
 CREATE TABLE `produk_laris` (
   `id_produklaris` int(10) NOT NULL,
+  `id_produkkami` int(11) NOT NULL,
   `gambar_pl` varchar(255) NOT NULL,
   `judul_pl` varchar(255) NOT NULL,
   `harga_pl` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produk_laris`
+--
+
+INSERT INTO `produk_laris` (`id_produklaris`, `id_produkkami`, `gambar_pl`, `judul_pl`, `harga_pl`) VALUES
+(3, 37, '48955386ff195e27c85df4b2cf2ac517.jpg', 'Kue Jelly', 20000),
+(7, 39, 'ee298c52f18650e1c262b681dcc21eaa.jpg', 'Kue Bolu Isi Pandan', 12121212),
+(8, 38, '2f0107ad15653138a49347f8938bd8c7.jpg', 'Dessert kue', 80000);
 
 -- --------------------------------------------------------
 
@@ -79,7 +89,7 @@ CREATE TABLE `user_form` (
 
 INSERT INTO `user_form` (`id`, `idt`, `imgp`, `name`, `email`, `password`) VALUES
 (22, 1, '7ef9957c8fb40ad968de7f94c97aa1e0.jpg', 'Hendrik Krisma', 'hendrik@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(49, 1, 'df870afda63964e7f8e3a7c4988cf290.jpg', 'Cristina', 'cris@gmail.com', '8ce87b8ec346ff4c80635f667d1592ae');
+(49, 1, 'fc3c2ccb3f34c5904d146c640225e002.jpg', 'Cristinaasas', 'cris@gmail.comasasas', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -142,7 +152,7 @@ ALTER TABLE `produk_kami`
 -- AUTO_INCREMENT for table `produk_laris`
 --
 ALTER TABLE `produk_laris`
-  MODIFY `id_produklaris` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produklaris` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user_form`

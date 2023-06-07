@@ -40,25 +40,22 @@ if ($aksi == "tambah") {
                         <table class="table text-nowrap mb-0 align-middle" width="100%" cellspacing="0">
                             <thead class="text-dark fs-4">
                                 <tr>
-                                    <th class="border-bottom-0" >
+                                    <th class="border-bottom-0 text-center" style="width: 5%">
                                         <h6 class="fw-semibold mb-0">ID</h6>
                                     </th>
-                                    <th class="border-bottom-0" >
+                                    <th class="border-bottom-0" style="width: 10%">
                                         <h6 class="fw-semibold mb-0">Gambar</h6>
                                     </th>
-                                    <th class="border-bottom-0" >
+                                    <th class="border-bottom-0" style="width: 25%">
                                         <h6 class="fw-semibold mb-0">Nama Kue</h6>
                                     </th>
                                     
-                                    <th class="border-bottom-0" >
+                                    <th class="border-bottom-0" style="width: 20%">
                                         <h6 class="fw-semibold mb-0">Harga</h6>
                                     </th>
-                                    <th class="border-bottom-0" >
+                                    <th class="border-bottom-0" style="width: 20%">
                                         <h6 class="fw-semibold mb-0">Kategori</h6>
                                     </th>
-                                    <!-- <th class="border-bottom-0" style="width:  15%">
-                                        <h6 class="fw-semibold mb-0">Kustomisasi</h6>
-                                    </th> -->
                                     <th class="border-bottom-0 text-center" style="width: 25%">
                                         <h6 class="fw-semibold mb-0">Aksi</h6>
                                     </th>
@@ -82,7 +79,7 @@ if ($aksi == "tambah") {
                                     $link_gambar = "./assets/images/inserted_img/$row[gambar_pl]";
                                 ?>
                                     <tr>
-                                        <td>
+                                        <td class="text-center">
                                             <?= $no; ?>
                                         </td>
                                         <td>
@@ -92,7 +89,7 @@ if ($aksi == "tambah") {
                                             <?= $row['judul_pl']; ?>
                                         </td>
                                         <td>
-                                            <?= $row['harga_pl']; ?>
+                                            <?= 'Rp.'.number_format($row['harga_pl'], 0, '.', ','); ?>
                                         </td>
                                         <td>
                                             <?= $row['judul_pk']; ?>

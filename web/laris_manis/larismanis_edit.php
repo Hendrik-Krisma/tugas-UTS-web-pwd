@@ -10,6 +10,24 @@ $data = mysqli_fetch_array($query);
 
 ?>
 
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        appearance:none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        appearance:textfield;
+        /* Firefox */
+    }
+</style>
+
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -39,7 +57,18 @@ $data = mysqli_fetch_array($query);
                     <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
                     <input type="number" class="form-control" value="<?= $data['harga_pl']; ?>" name="hargapl" required>
                 </div>
-                
+                <div class="form-group">
+                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <select name="id_produkkami" class="form-select">
+                        <?php
+                        $qry = mysqli_query($con, "SELECT * FROM produk_kami ");
+                        while ($row = mysqli_fetch_array($qry)) {
+                            echo "<option value='$row[id_produkkami]'>$row[judul_pk]</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+
             </div>
 
     </div>

@@ -38,7 +38,7 @@ if ($aksi == "tambah") {
                         <table class="table text-nowrap mb-0 align-middle" width="100%" cellspacing="0">
                             <thead class="text-dark fs-4">
                                 <tr>
-                                    <th class="border-bottom-0">
+                                    <th class="border-bottom-0 text-center" >
                                         <h6 class="fw-semibold mb-0">ID</h6>
                                     </th>
                                     <th class="border-bottom-0">
@@ -78,7 +78,7 @@ if ($aksi == "tambah") {
                                     $link_gambar = "./auth/assets_auth/images/inserted_img/$row[imgp]";
                                 ?>
                                     <tr>
-                                        <td>
+                                        <td class="text-center">
                                             <?= $no; ?>
                                         </td>
                                         <td>

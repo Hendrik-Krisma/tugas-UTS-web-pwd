@@ -1,3 +1,20 @@
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        appearance:none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        appearance:textfield;
+        /* Firefox */
+    }
+</style>
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -24,7 +41,7 @@
                 </div>
                 <div class="form-group mb-4">
                     <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
-                    <input type="number" class="form-control" placeholder="Masukan Harga" name="hargapl" required>
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" class="form-control" placeholder="Masukan Harga" name="hargapl" required>
                 </div>
                 <div class="form-group mb-4">
                     <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>

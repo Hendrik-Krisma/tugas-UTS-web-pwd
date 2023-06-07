@@ -40,17 +40,20 @@ if ($aksi == "tambah") {
                         <table class="table text-nowrap mb-0 align-middle" width="100%" cellspacing="0">
                             <thead class="text-dark fs-4">
                                 <tr>
-                                    <th class="border-bottom-0" style="width: 5%">
+                                    <th class="border-bottom-0 text-center" style="width: 5%">
                                         <h6 class="fw-semibold mb-0">ID</h6>
                                     </th>
                                     <th class="border-bottom-0" style="width: 15%">
                                         <h6 class="fw-semibold mb-0">Gambar</h6>
                                     </th>
-                                    <th class="border-bottom-0" style="width: 15">
+                                    <th class="border-bottom-0" style="width: 20%">
                                         <h6 class="fw-semibold mb-0">Judul</h6>
                                     </th>
-                                    <th class="border-bottom-0" style="width: 25%">
+                                    <th class="border-bottom-0" style="width: 15%">
                                         <h6 class="fw-semibold mb-0">Deskripsi</h6>
+                                    </th>
+                                    <th class="border-bottom-0 " style="width: 5%">
+                                        <h6 class="fw-semibold mb-0">Total</h6>
                                     </th>
                                     <th class="border-bottom-0" style="width:  15%">
                                         <h6 class="fw-semibold mb-0">Kustomisasi</h6>
@@ -63,7 +66,7 @@ if ($aksi == "tambah") {
                             <tbody id="myTable">
                                 <?php
                                 $no = 1;
-                                $sql = "SELECT * FROM produk_kami";
+                                $sql = "SELECT *,(SELECT COUNT(id_produkkami) FROM produk_laris WHERE produk_laris.id_produkkami=produk_kami.id_produkkami) AS Total FROM produk_kami;";
                                 $query = mysqli_query($con, $sql);
                                 
                                 while ($row = mysqli_fetch_array($query)) {
@@ -78,7 +81,7 @@ if ($aksi == "tambah") {
                                     $link_gambar = "./assets/images/inserted_img/$row[gambar_pk]";
                                 ?>
                                     <tr>
-                                        <td>
+                                        <td class="text-center">
                                             <?= $no; ?>
                                         </td>
                                         <td>
@@ -92,6 +95,9 @@ if ($aksi == "tambah") {
                                             $deskripsi = wordwrap($text, 40, "<br/>\n");
                                             echo $deskripsi;
                                             ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?= $row['Total']; ?>
                                         </td>
                                         <td>
                                             <?= $row['kustomisasi'];

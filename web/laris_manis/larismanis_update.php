@@ -1,11 +1,12 @@
 <?php 
 include "../../config/connection.php";
 session_start();
+$id_produkkami = mysqli_real_escape_string($con, $_POST['id_produkkami']);
 $idproduklaris = mysqli_real_escape_string($con, $_POST['idproduklaris']);
 $judulpl = mysqli_real_escape_string($con, $_POST['judulpl']);
 $hargapl = mysqli_real_escape_string($con, $_POST['hargapl']);
 
-$sql = "UPDATE produk_laris SET judul_pl='$judulpl', harga_pl='$hargapl' where id_produklaris='$idproduklaris'";
+$sql = "UPDATE produk_laris SET id_produkkami='$id_produkkami', judul_pl='$judulpl', harga_pl='$hargapl' where id_produklaris='$idproduklaris'";
 
 mysqli_query($con, $sql);
 // print_r($sql);
