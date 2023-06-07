@@ -5,9 +5,11 @@ $idproduklaris = mysqli_real_escape_string($con, $_POST['idproduklaris']);
 $judulpl = mysqli_real_escape_string($con, $_POST['judulpl']);
 $hargapl = mysqli_real_escape_string($con, $_POST['hargapl']);
 
-$sql = "UPDATE produk_laris SET judul_pl='$judulpl', harga_pl='$hargapl', where id_produklaris='$idproduklaris'";
+$sql = "UPDATE produk_laris SET judul_pl='$judulpl', harga_pl='$hargapl' where id_produklaris='$idproduklaris'";
 
 mysqli_query($con, $sql);
+// print_r($sql);
+
 
 $foto_cek = $_FILES['gambarpl']['name'];
 if (!empty($foto_cek)) {
@@ -31,7 +33,7 @@ if (!empty($foto_cek)) {
 }
 
 
-$url = "../../admin_dashboard.php?section=produk_laris";
+$url = "../../admin_dashboard.php?section=laris_manis";
 $pesan = "Data berhasil disimpan";
 
 echo "<script>alert('$pesan'); location='$url';</script>";

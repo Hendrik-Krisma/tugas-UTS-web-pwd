@@ -11,7 +11,7 @@ if (!empty($row['gambar_pl'])) {
 $sql = "DELETE FROM produk_laris WHERE id_produklaris='$id_produklaris'";
 $query = mysqli_query($con, $sql);
 
-$url = "../../admin_dashboard.php?section=produk_laris";
+$url = "../../admin_dashboard.php?section=laris_manis";
 $pesan = "Data berhasil dihapus";
 
 echo "<script>alert('$pesan'); location='$url' </script>";

@@ -65,6 +65,7 @@ if ($aksi == "tambah") {
                                 $no = 1;
                                 $sql = "SELECT * FROM produk_kami";
                                 $query = mysqli_query($con, $sql);
+                                
                                 while ($row = mysqli_fetch_array($query)) {
                                     $link_edit = "admin_dashboard.php?section=produk_kami&aksi=edit&id=$row[id_produkkami]";
                                     $link_hapus = "./web/produk_kami/produkkami_delete.php?id=$row[id_produkkami]";

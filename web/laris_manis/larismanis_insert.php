@@ -1,5 +1,6 @@
 <?php
 include "../../config/connection.php";
+$id_produkkami = mysqli_real_escape_string($con, $_POST['id_produkkami']);
 $judulpl = mysqli_real_escape_string($con, $_POST['judulpl']);
 $hargapl =mysqli_real_escape_string($con,$_POST['hargapl']);                                                                 
 
@@ -15,10 +16,11 @@ if (!empty($foto_cek)) {
     $gambarpl = $name;
 }
 
-$sql = "INSERT INTO `produk_laris` ( `gambar_pl`, `judul_pl`, `harga_pl`) VALUES ('$gambarpl', '$judulpl', '$hargapl');";
+$sql = "INSERT INTO `produk_laris` (`id_produkkami`, `gambar_pl`, `judul_pl`, `harga_pl`) VALUES ('$id_produkkami','$gambarpl', '$judulpl', '$hargapl');";
 $query = mysqli_query($con, $sql);
+// print_r($sql);
 
-$url = "../../admin_dashboard.php?section=produk_laris";
+$url = "../../admin_dashboard.php?section=laris_manis";
 $pesan = "Data berhasil disimpan";
 
 echo "<script>alert('$pesan'); location='$url';</script>";

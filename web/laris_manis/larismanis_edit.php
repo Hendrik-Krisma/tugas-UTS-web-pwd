@@ -23,22 +23,21 @@ $data = mysqli_fetch_array($query);
         <div class="card-header py-3">
             <h3 class="m-0 font-weight-bold text-primary">Form Tambah Data</h3>
         </div>
-        <form action="./web/laris_manis/produklaris_update.php" method="post" enctype="multipart/form-data">
+        <form action="./web/laris_manis/larismanis_update.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id_produklaris" value="<?= $data['id_produklaris']; ?>">
             <div class=" card-body">
                 <input type="hidden" name="idproduklaris" value="<?= $data['id_produklaris']; ?>">
                 <div class="form-group mb-4">
-                    <label>Foto: <sup class="text-danger">Abaikan bila tidak mengubah</sup></label>
+                    <label>Foto: <sup class="text-info">Abaikan bila tidak mengubah</sup></label>
                     <input type="file" class="form-control" name="gambarpl">
                 </div>
                 <div class="form-group mb-4">
-                    <label>Judul:</label>
+                    <label>Nama Kue:</label>
                     <input type="text" class="form-control" value="<?= $data['judul_pl']; ?>" name="judulpl" required>
                 </div>
-                <div class="form-group mb-4">
-                    <label>Harga:</label>
-                    <input type="text" class="form-control" value="<?= $data['harga_pl']; ?>" name="deskripsipl"
-                        required>
+                <div class="form-group">
+                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <input type="number" class="form-control" value="<?= $data['harga_pl']; ?>" name="hargapl" required>
                 </div>
                 
             </div>

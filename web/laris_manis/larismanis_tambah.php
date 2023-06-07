@@ -1,10 +1,3 @@
-<style>
-    .size-new{
-        height:1.6em;
-        width:1.6em;
-        margin-right:1em;
-    }
-</style>
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -26,14 +19,26 @@
                     <input type="file" class="form-control" name="gambarpl">
                 </div>
                 <div class="form-group mb-4">
-                    <label>Judul:</label>
+                    <label>Nama Kue:</label>
                     <input type="text" class="form-control" placeholder="Masukan nama Judul" name="judulpl" required>
                 </div>
                 <div class="form-group mb-4">
-                    <label>Harga:</label>
-                    <input type="text" class="form-control" placeholder="Masukan Harga" name="hargapl"
-                        required>
+                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <input type="number" class="form-control" placeholder="Masukan Harga" name="hargapl" required>
                 </div>
+                <div class="form-group mb-4">
+                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <select name="id_produkkami" class="form-select">
+                        <?php
+                        $qry = mysqli_query($con, "SELECT * FROM produk_kami ");
+                        while ($row = mysqli_fetch_array($qry)) {
+                            echo "<option value='$row[id_produkkami]'>$row[judul_pk]</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+
+
 
             </div>
 
@@ -42,7 +47,7 @@
                 <button type="submit" name="btn" value="Simpan" class="btn btn-primary">
                     <i class="fas fa-save"></i> Simpan
                 </button>
-                <a href="admin_dashboard.php?section=produk_laris" class="btn btn-warning">
+                <a href="admin_dashboard.php?section=laris_manis" class="btn btn-warning">
                     <i class="fas fa-arrow-left"></i> Kembali
                 </a>
             </div>

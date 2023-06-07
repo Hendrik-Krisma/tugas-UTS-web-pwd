@@ -40,17 +40,21 @@ if ($aksi == "tambah") {
                         <table class="table text-nowrap mb-0 align-middle" width="100%" cellspacing="0">
                             <thead class="text-dark fs-4">
                                 <tr>
-                                    <th class="border-bottom-0" style="width: 5%">
+                                    <th class="border-bottom-0" >
                                         <h6 class="fw-semibold mb-0">ID</h6>
                                     </th>
-                                    <th class="border-bottom-0" style="width: 15%">
+                                    <th class="border-bottom-0" >
                                         <h6 class="fw-semibold mb-0">Gambar</h6>
                                     </th>
-                                    <th class="border-bottom-0" style="width: 15">
-                                        <h6 class="fw-semibold mb-0">Judul</h6>
+                                    <th class="border-bottom-0" >
+                                        <h6 class="fw-semibold mb-0">Nama Kue</h6>
                                     </th>
-                                    <th class="border-bottom-0" style="width: 25%">
+                                    
+                                    <th class="border-bottom-0" >
                                         <h6 class="fw-semibold mb-0">Harga</h6>
+                                    </th>
+                                    <th class="border-bottom-0" >
+                                        <h6 class="fw-semibold mb-0">Kategori</h6>
                                     </th>
                                     <!-- <th class="border-bottom-0" style="width:  15%">
                                         <h6 class="fw-semibold mb-0">Kustomisasi</h6>
@@ -64,10 +68,10 @@ if ($aksi == "tambah") {
                             <tbody id="myTable">
                                 <?php
                                 $no = 1;
-                                $sql = "SELECT * FROM produk_laris";
+                                $sql = "SELECT * FROM produk_laris LEFT JOIN produk_kami USING(id_produkkami)";
                                 $query = mysqli_query($con, $sql);
                                 while ($row = mysqli_fetch_array($query)) {
-                                    $link_edit = "admin_dashboard.php?section=produk_laris&aksi=edit&id=$row[id_produklaris]";
+                                    $link_edit = "admin_dashboard.php?section=laris_manis&aksi=edit&id=$row[id_produklaris]";
                                     $link_hapus = "./web/laris_manis/larismanis_delete.php?id=$row[id_produklaris]";
 
                                     $gambar = "default.jpg";
@@ -89,6 +93,9 @@ if ($aksi == "tambah") {
                                         </td>
                                         <td>
                                             <?= $row['harga_pl']; ?>
+                                        </td>
+                                        <td>
+                                            <?= $row['judul_pk']; ?>
                                         </td>
                                         <td class="text-center">
                                             <button type="button" class="btn btn-success">
