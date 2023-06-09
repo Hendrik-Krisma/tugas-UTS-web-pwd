@@ -15,7 +15,7 @@ if (!isset($_SESSION)) {
     </li>
 
     <li class="nav-item">
-      <a class="md-3 nav-link nav-icon-hover"><img src="./auth/assets_auth/images/inserted_img/<?php echo $_SESSION['admin_imgp'] ?>"
+      <a class="md-3 nav-link"><img src="./auth/assets_auth/images/inserted_img/<?php echo $_SESSION['admin_imgp'] ?>"
           style='height: 35px; width: 35px; object-fit: cover' class="rounded-circle">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_SESSION['admin_name'] ?></a>
     </li>
     <!-- <li class="nav-item">

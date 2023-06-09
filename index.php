@@ -149,6 +149,26 @@ if (isset($_SESSION['admin_name'])) {
         </div>
 
         <div class="row">
+            <?php
+            $sql = "SELECT * FROM produk_laris";
+            $query = mysqli_query($con, $sql);
+            while ($row = mysqli_fetch_array($query)) {
+
+                $link_gambar = "./assets/images/inserted_img/$row[gambar_pl]";
+            ?>
+
+                <div class="col-md-4 gambar_baris_satu">
+                    <img class="imgs" src="<?= $link_gambar;  ?>" />
+                </div>
+
+            <?php
+            }
+            ?>
+
+            <span class="col-12" style="margin-top: 2em;"></span>
+        </div>
+
+        <!-- <div class="row">
             <div class="col-md-4 gambar_baris_satu">
                 <img class="imgs" src="assets/images/kue/kue4.jpg" />
             </div>
@@ -158,9 +178,9 @@ if (isset($_SESSION['admin_name'])) {
             <div class="col-md-4 gambar_baris_satu">
                 <img class="imgs" src="assets/images/kue/kue6.jpg" />
             </div>
-        </div>
+        </div> -->
 
-        <div class="row ">
+        <!-- <div class="row ">
             <div class="col-md gambar_baris_dua">
                 <img class="imgs" src="assets/images/kue/kue7.jpg" />
             </div>
@@ -173,7 +193,7 @@ if (isset($_SESSION['admin_name'])) {
             <div class="col-md gambar_baris_dua">
                 <img class="imgs" src="assets/images/kue/kue10.jpg" />
             </div>
-        </div>
+        </div> -->
 
         <div class="row mt-5" id="Tentang">
             <div class="judul_bagan col-12">
