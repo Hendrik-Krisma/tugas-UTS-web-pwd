@@ -1,8 +1,7 @@
 <?php
-@include "./config/connection.php";
+include "./config/connection.php";
 
-
-@session_start();
+session_start();
 if (isset($_SESSION['admin_name'])) {
     echo '
     <a class="text-light col pe-auto justify-content-center" href="admin_dashboard.php">

@@ -26,7 +26,7 @@ if (!isset($_SESSION)) {
   </ul>
 
   <div class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-    <a class="nav-link" href="../admin_panel/auth/logout_akun.php">
+    <a class="nav-link" href="../auth/logout_akun.php">
       <button type="button" class="btn btn-danger m-1"> Keluar&nbsp; Akun
       </button>
     </a>
