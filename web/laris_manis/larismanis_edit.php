@@ -58,7 +58,7 @@ $data = mysqli_fetch_array($query);
                     <input type="number" class="form-control" value="<?= $data['harga_pl']; ?>" name="hargapl" required>
                 </div>
                 <div class="form-group">
-                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <label>Jenis: </label>
                     <select name="id_produkkami" class="form-select">
                         <?php
                         $qry = mysqli_query($con, "SELECT * FROM produk_kami ");

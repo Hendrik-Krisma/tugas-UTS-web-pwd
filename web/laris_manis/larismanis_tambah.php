@@ -44,7 +44,7 @@
                     <input type="number" pattern="[0-9]*" inputmode="numeric" class="form-control" placeholder="Masukan Harga" name="hargapl" required>
                 </div>
                 <div class="form-group mb-4">
-                    <label>Harga: <sup class="text-info">Dalam bentuk Rupiah Indonesia</sup></label>
+                    <label>Jenis: </label>
                     <select name="id_produkkami" class="form-select">
                         <?php
                         $qry = mysqli_query($con, "SELECT * FROM produk_kami ");
